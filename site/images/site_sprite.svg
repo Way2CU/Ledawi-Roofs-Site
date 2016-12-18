@@ -1,0 +1,18 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-arrow-left" viewBox="0 0 101 32">
+<title>arrow-left</title>
+<path class="path1" fill="#d93f3d" d="M20.324 14.334h80.623v3.365h-80.623v-3.365z"></path>
+<path class="path2" fill="#d93f3d" d="M0 16.017c11.016-4.023 20.542-9.442 28.974-16.174l-5.992 16.174 5.788 15.983c-8.228-6.564-17.754-11.972-28.065-15.757z"></path>
+</symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 101 32">
+<title>arrow-right</title>
+<path class="path1" fill="#d93f3d" d="M0 14.301h80.623v3.365h-80.623v-3.365z"></path>
+<path class="path2" fill="#d93f3d" d="M100.946 15.983c-11.016 4.023-20.542 9.442-28.974 16.174l5.992-16.174-5.788-15.983c8.228 6.564 17.754 11.972 28.065 15.757z"></path>
+</symbol>
+<symbol id="icon-phone" viewBox="0 0 32 32">
+<title>phone</title>
+<path class="path1" fill="#fff" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM20.23 25.73c-1.36-0.1-10.24-2.23-14-12.79-0.73-2.22 0.2-5.79 2.77-6.58s3.88 2.76 4.26 5l-2.26 2.26s-0.060 1.4 3 4.47 4.47 3 4.47 3l2.6-2.6c1.884 0.676 3.512 1.499 5.016 2.494-0.496 3.016-2.596 5.086-5.856 4.746z"></path>
+</symbol>
+</defs>
+</svg>
