@@ -9,7 +9,37 @@
 		</head>
 
 		<body>
-			<h1>It works!</h1>
+			<!-- Header with form -->
+			<header>
+
+				<img
+					src="_BASEURL.'/site/images/logo.svg'"
+					alt="site_logo"
+					cms:eval="src"
+					/>
+
+					<h1><cms:text constant="experts_building" /></h1>
+					<p><cms:text constant="call_us" /></p>
+
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone" />
+						<cms:svg file="site_sprite.svg" symbol="phone"/>
+					</a>
+
+					<div id="form_container">
+
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+						/>
+
+					</div>
+			</header>
 		</body>
 	</html>
 </document>
