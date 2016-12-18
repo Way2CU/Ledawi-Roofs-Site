@@ -69,6 +69,19 @@
 				/>
 
 			</section>
+
+			<!-- showcase sections articles with image gallery connected-->
+			<section class="showcase">
+
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="showcase"
+					template="parts/showcase_article.xml"
+					order_by="text_id"
+				/>
+
+			</section>
 		</body>
 	</html>
 </document>
