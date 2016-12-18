@@ -1,0 +1,169 @@
+/**
+ * Content Style Sheet
+ * Ledwai Roofs
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+header {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	display: block;
+	background-image: url(../images/header_background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1920px 700px;
+	height: 700px;
+	text-align: center;
+	position: relative;
+}
+
+header img {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 5%;
+}
+
+header h1 {
+	color: white;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 0.5em;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 3em;
+	padding-bottom: 0.5em;
+}
+
+header p {
+	color: white;
+	font-weight: 700;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 1.3em;
+	margin: 0;
+	padding-bottom: 0.5em;
+}
+
+header a {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	background-color: @color_button;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.3em;
+	padding: 0.5em 1em;
+	border: 1px solid @color_border;
+	border-radius: 5px;
+}
+
+header a:hover {
+	animation-name: skew;
+	animation-duration: 1s;
+	animation-interation-count: 1s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes skew {
+	16.65% {
+		transform: skew(-12deg);
+	}
+	33.3% {
+		transform: skew(10deg);
+	}
+	49.95% {
+		transform: skew(-6deg);
+	}
+	66.65 {
+		transform: skew(4deg);
+	}
+	83.25% {
+		transform: skew(-2deg);
+	}
+	100% {
+		transform: skew(0);
+	}
+}
+
+header a svg {
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 0.5em;
+}
+
+#form_container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 100%;
+	bottom: 0;
+	background-color: fade(black, 50%);
+}
+
+#form_container form {
+	display: block;
+	margin: 0 auto;
+	padding: 2em calc(~'(100% - 1200px)' / 2);
+}
+
+#form_container form label {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'100% -150px');
+	padding-right: 1em;
+}
+
+#form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	padding-left: 0.5em;
+	font-weight: 700;
+}
+
+
+#form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0.5em;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: fade(black, 30%);
+	color: white;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+#form_container form label input:active,
+#form_container form label input:hover {
+	border: 1px solid @color_border;
+}
+
+#form_container form div.controls {
+	display: inline-block;
+	vertical-align: middle;
+	width: 150px;
+}
+
+#form_container form div.controls button {
+	display: block;
+	width: 150px;
+	padding: 1em 0em;
+	margin-right: 1em;
+	background-color: @color_button;
+	border: 1px solid @color_border;
+	color: white;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+#form_container form div.controls button:hover {
+	transform: translateY(-10px);
+	box-shadow:  -1px 9px 14px -3px rgba(50, 50, 50, 0.82);
+}
