@@ -89,6 +89,14 @@
 
 			<h2><cms:text constant="latest_projects" /></h2>
 
+			<!-- Checkbox for mobile version -->
+				<cms:mobile>
+					<label for="checkbox">
+						<span><cms:text constant="more_images" /></span>
+					</label>
+						<input id="checkbox" type="checkbox"/>
+				</cms:mobile>
+
 				<cms:module
 					name="gallery"
 					group="projects_gallery"
