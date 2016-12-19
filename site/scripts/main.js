@@ -51,7 +51,18 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+//Lightbox
+Site.gallery = new LightBox('section.gallery a', true, true, true);
+
+//Testimonials
+Site.testimonials = new PageControl('div.wrapper', 'article');
+	Site.testimonials
+	.attachNextControl($('a.next'))
+	.attachPreviousControl($('a.prev'))
+	.setWrapAround(true);
 };
+
 
 
 // connect document `load` event with handler function
