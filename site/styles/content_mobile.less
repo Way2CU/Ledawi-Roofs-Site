@@ -1,0 +1,483 @@
+/**
+ * Content_mobile Style Sheet
+ * Ledwai Roofs
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+ header {
+	padding: 0 1em;
+	display: block;
+	background-image: url(../images/mobile_header_background.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	text-align: center;
+	position: relative;
+}
+
+header img {
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 5%;
+}
+
+header h1 {
+	color: white;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.2em;
+	padding-top: 1em;
+	text-shadow: 2px 2px 4px #000000;
+	padding-bottom: 0.5em;
+}
+
+header p {
+	color: white;
+	font-weight: 700;
+	text-shadow: 2px 2px 4px #000000;
+	margin: 0;
+	padding: 1em;
+}
+
+header a {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	background-color: @color_button;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0.5em 1em;
+	border: 1px solid @color_border;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+
+header a svg {
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 0.5em;
+}
+
+#form_container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 100%;
+	top: 100%;
+	background-color: #231f20;
+}
+
+#form_container form {
+	display: block;
+	margin: 0 auto;
+	padding: 1em 1em;
+}
+
+#form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0.5em;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: fade(black, 30%);
+	color: white;
+	font-weight: 700;
+	width: calc(~'(100% - 50px - 1em)');
+	margin-bottom: 1em;
+	box-sizing: border-box;
+}
+
+#form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	font-weight: 700;
+	padding-left: 1em;
+	width: 50px;
+}
+
+#form_container form div.controls {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#form_container form div.controls button {
+	display: block;
+	margin: 0 auto;
+	padding: 1em 1.5em;
+	background-color: @color_button;
+	border: 1px solid @color_border;
+	color: white;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*
+*Section features
+*/
+
+section.features {
+	padding: 300px 1em 0 1em;
+}
+
+section.features div.stamp {
+	position: relative;
+}
+
+section.features div.stamp article p {
+	color: @color_text;
+}
+
+section.features div.stamp img {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
+section.features > article {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 100px;
+}
+
+section.features > article h3 {
+	text-align: center;
+}
+
+section.features > article:before {
+	content: "";
+	display: block;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-position: 0px 0;
+	background-image: url(../images/icons_sprite.svg);
+	background-size: 600px 150px;
+	background-repeat: no-repeat;
+}
+
+section.features > article:nth-of-type(2):before {
+	background-position: -150px 0;
+}
+
+section.features > article:nth-of-type(3):before {
+	background-position: -300px 0;
+}
+
+section.features > article:nth-of-type(4):before {
+	background-position: -450px 0;
+}
+
+
+/*
+* Section showcase
+*/
+
+section.showcase {
+	padding: 0 1em;
+	background-image: url(../images/mobile_wood_desk.jpg), linear-gradient(@color_brown, @color_brown);
+	background-position: center top, center top;
+	background-repeat: no-repeat;
+	background-size: 100% auto, 100% auto;
+	padding-top: 50px;
+	color: white;
+}
+
+section.showcase article h3 {
+	margin: 0;
+	font-weight: 400;
+}
+
+section.showcase article figure {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 1em;
+}
+
+section.showcase article figure:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-top: 50px solid @color_brown;
+}
+
+/*
+*Section Gallery
+*/
+
+section.gallery {
+	padding: 0em 1em;
+	text-align: center;
+	position: relative;
+}
+
+section.gallery h2 {
+	color: @color_text;
+	text-align: center;
+	font-weight: 700;
+}
+
+section > label {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1em 1.5em;
+	background-color: @color_button;
+	color: white;
+	font-weight: 700;
+	margin-top: 1em;
+}
+
+#checkbox {
+	display: none;
+}
+
+#checkbox:checked ~ a:nth-of-type(n+5) {
+	display: inline-block;
+}
+
+section.gallery a {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+	width: 130px;
+}
+
+section.gallery a:nth-of-type(n+5) {
+	display: none;
+}
+
+section.gallery a:nth-of-type(odd) {
+	margin-left: calc(~'(100% - 260px)');
+}
+
+section.gallery a span {
+	display: block;
+}
+
+/*
+* Section testimonials
+*/
+
+section.testimonials {
+	padding: 100px 1em 0 1em;
+}
+
+section.testimonials h2 {
+	text-align: center;
+	color: @color_brown;
+}
+
+section.testimonials div.wrapper {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 300px;
+	position: relative;
+}
+
+section.testimonials div.wrapper article {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+	padding-top: 1em;
+	width: 100%;
+}
+
+section.testimonials div.wrapper article.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section.testimonials div.wrapper article h4 {
+	text-align: center;
+}
+
+section.testimonials div.wrapper a svg {
+	width: 35px;
+	height: 35px;
+}
+
+section.testimonials div.wrapper a.prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section.testimonials div.wrapper a.next {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/*
+*Footer with form
+*/
+
+footer {
+	padding: 0em 1em;
+	padding-top: 1em;
+	background-image: url(../images/mobile_footer_background.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-color: #231f20;
+	position: relative;
+}
+
+footer img {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	padding-bottom: 1em;
+}
+
+footer div.middle {
+	display: block;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+footer div.middle img {
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	padding-top: 1em;
+}
+
+footer div.middle p {
+	margin: 0;
+	text-align: center;
+	padding: 1em;
+}
+
+footer div.middle a {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-decoration: none;
+	color: white;
+	background-color: @color_button;
+	padding: 0.5em 0.5em;
+	border-radius: 5px;
+	border: 1px solid @color_border;
+	font-weight: 700;
+}
+
+footer div.middle a svg {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5em;
+}
+
+footer div.form_container {
+	display: block;
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+footer div.form_container h5 {
+	color: white;
+	text-align: center;
+}
+
+footer div.form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1em;
+}
+
+footer div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 1em;
+	color: white;
+	font-weight: 700;
+	width: 35px;
+}
+
+footer div.form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0.5em;
+	border: 1px solid white;
+	border-radius: 5px;
+	width: calc(~'(100% - 35px - 1em)');
+	box-sizing: border-box;
+	border: 1px solid @color_border;
+}
+
+footer div.form_container form div.controls {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+footer div.form_container form div.controls button {
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	background-color: @color_button;
+	padding: 0.5em 1.5em;
+	border: 1px solid @color_border;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+footer div.copyright.light {
+	background-color: black;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 100px') center;
+}
+
+footer div.copyright.light a {
+	text-decoration: none;
+	color: @color_button;
+	transition: all 0.3s;
+}
+
+footer div.copyright.light a:hover {
+	color: @color_border;
+}
