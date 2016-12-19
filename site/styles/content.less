@@ -206,8 +206,8 @@ section.features > article {
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	padding-top: 150px;
-
+	box-sizing: border-box;
+	padding: 150px 1em 0 1em;
 }
 
 section.features > article:before {
@@ -217,29 +217,30 @@ section.features > article:before {
 	height: 150px;
 	position: absolute;
 	top: 0;
-	right: 1em;
-	background-position: -465px center;
+	left: 50%;
+	transform: translateX(-50%);
+	background-position: 0px 0;
 	background-image: url(../images/icons_sprite.svg);
-	background-size: 650px 150px;
+	background-size: 600px 150px;
 	background-repeat: no-repeat;
 }
 
 section.features > article:nth-of-type(2):before {
-	background-position: -315px center;
+	background-position: -150px 0;
 }
 
 section.features > article:nth-of-type(3):before {
-	background-position: -185px center;
+	background-position: -300px 0;
 }
 
 section.features > article:nth-of-type(4):before {
-	background-position: -25px center;
+	background-position: -450px 0;
 }
 
 section.features > article:after {
 	content: "";
 	position: absolute;
-	left: 1em;
+	left: 0em;
 	top: 200px;
 	transform: translateY(-50%);
 	width: 3px;
@@ -267,13 +268,52 @@ section.showcase {
 
 section.showcase article h3 {
 	margin: 0;
-	padding-bottom: 1em;
 	font-weight: 400;
+}
+
+section.showcase article figure {
+	margin: 0;
+	position: relative;
+}
+
+section.showcase article figure:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-top: 50px solid @color_brown;
+}
+
+section.showcase article:nth-of-type(2) figure:after {
+	left: 50%;
+	transform: translateX(-50%);
+	top: 86%;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-bottom: 50px solid @color_brown;
+	border-top: 0 solid transparent;
+
+}
+
+section.showcase article:nth-of-type(4) figure:after {
+	top: 50%;
+	transform: translateY(-50%);
+	left: 69%;
+	border-right: 50px solid @color_brown;
+	border-left: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-top: 50px solid transparent;
 }
 
 section.showcase article:nth-of-type(-n+3){
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
 	width: calc(~'(100% / 3)');
 	min-height: 620px;
 	box-sizing: border-box;
@@ -289,7 +329,7 @@ section.showcase article:nth-of-type(2) p {
 	left: 0;
 }
 
-section.showcase article:nth-of-type(2) img {
+section.showcase article:nth-of-type(2) figure {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -315,7 +355,7 @@ section.showcase article:last-child h3 {
 	right: 0;
 }
 
-section.showcase article:last-child img {
+section.showcase article:last-child figure {
 	display: inline-block;
 	vertical-align: middle;
 	padding-right: 30px;
@@ -323,6 +363,123 @@ section.showcase article:last-child img {
 
 section.showcase article:last-child p {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	width: 30%;
+	padding-top: 1.5em;
+}
+
+/*
+*Section Gallery
+*/
+
+section.gallery {
+	padding: 0em calc(~'(100% - 1200px)' / 2 );
+}
+
+section.gallery h2 {
+	color: @color_text;
+	text-align: center;
+}
+
+section.gallery a {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	transition: all 0.3s;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+section.gallery a span {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 2em;
+	color: white;
+	background-color: fade(@color_button, 50%);
+	border: 1px solid white;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+section.gallery a:hover span {
+	opacity: 1;
+}
+
+section.gallery a span:before {
+	content: "";
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	border: 1px solid white;
+}
+
+section.gallery a img {
+	display: block;
+}
+
+/*
+* Section testimonials
+*/
+
+section.testimonials {
+	padding: 0em calc(~'(100% - 1200px)' / 2 );
+}
+
+section.testimonials h2 {
+	text-align: center;
+	color: @color_brown;
+}
+
+section.testimonials div.wrapper {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 300px;
+	position: relative;
+}
+
+section.testimonials div.wrapper article {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+}
+
+section.testimonials div.wrapper article.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section.testimonials div.wrapper article h4 {
+	text-align: center;
+}
+
+section.testimonials div.wrapper a svg {
+	width: 75px;
+	height: 75px;
+}
+
+section.testimonials div.wrapper a.prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+section.testimonials div.wrapper a.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
 }
