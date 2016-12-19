@@ -6,6 +6,16 @@
  * Authors: Iliya Melishev
  */
 
+
+@keyframes buzz {
+	50% {
+		transform: translateX(3px) rotate(2deg);
+	}
+	100% {
+		transform: translateX(-3px) rotate(-2deg);
+	}
+}
+
 header {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	display: block;
@@ -59,31 +69,10 @@ header a {
 }
 
 header a:hover {
-	animation-name: skew;
-	animation-duration: 1s;
-	animation-interation-count: 1s;
-	animation-timing-function: ease-in-out;
-}
-
-@keyframes skew {
-	16.65% {
-		transform: skew(-12deg);
-	}
-	33.3% {
-		transform: skew(10deg);
-	}
-	49.95% {
-		transform: skew(-6deg);
-	}
-	66.65 {
-		transform: skew(4deg);
-	}
-	83.25% {
-		transform: skew(-2deg);
-	}
-	100% {
-		transform: skew(0);
-	}
+	animation-name: buzz;
+	animation-duration: 0.15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 
 header a svg {
@@ -482,4 +471,143 @@ section.testimonials div.wrapper a.next {
 	top: 50%;
 	transform: translateY(-50%);
 	right: 0;
+}
+
+/*
+*Footer with form
+*/
+
+footer {
+	padding: 0em calc(~'(100% - 1200px)' / 2 );
+	background-image: url(../images/footer_background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1920px 500px;
+}
+
+footer img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+footer div.middle {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	color: white;
+	text-align: center;
+}
+
+footer div.middle img {
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	padding-top: 1em;
+}
+
+footer div.middle p {
+	margin: 0;
+	text-align: center;
+	padding: 1em;
+}
+
+footer div.middle a {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-decoration: none;
+	color: white;
+	background-color: @color_button;
+	padding: 0.5em 1.5em;
+	border-radius: 5px;
+	border: 1px solid @color_border;
+	font-weight: 700;
+}
+
+footer div.middle a:hover {
+	animation-name: buzz;
+	animation-duration: 0.15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+footer div.middle a svg {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5em;
+}
+
+footer div.form_container {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+footer div.form_container h5 {
+	color: white;
+	text-align: center;
+}
+
+footer div.form_container form {
+	display: block;
+	width: 100%;
+}
+
+footer div.form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1em;
+}
+
+footer div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 1em;
+	color: white;
+	font-weight: 700;
+	width: 35px;
+}
+
+footer div.form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0.5em;
+	border: 1px solid white;
+	border-radius: 5px;
+	width: calc(~'(100% - 35px - 1em)');
+	box-sizing: border-box;
+	border: 1px solid @color_border;
+}
+
+footer div.form_container form label input:hover,
+footer div.form_container form label input:active {
+	border: 1px solid lighten(@color_border, 10%);
+}
+
+footer div.form_container form div.controls {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+footer div.form_container form div.controls button {
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	background-color: @color_button;
+	padding: 0.5em 1.5em;
+	border: 1px solid @color_border;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+footer div.form_container form div.controls button:hover {
+	transform: translateY(-10px);
+	box-shadow:  -1px 9px 14px -3px rgba(50, 50, 50, 0.82);
 }
