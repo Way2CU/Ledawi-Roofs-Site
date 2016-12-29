@@ -253,6 +253,7 @@ section.showcase {
 	background-size: 1920px 300px, 100% auto;
 	padding-top: 150px;
 	color: white;
+	padding-bottom: 1em;
 }
 
 section.showcase article h3 {
@@ -263,6 +264,10 @@ section.showcase article h3 {
 section.showcase article figure {
 	margin: 0;
 	position: relative;
+}
+
+section.showcase article figure img {
+	display: block;
 }
 
 section.showcase article figure:after {
@@ -281,12 +286,11 @@ section.showcase article figure:after {
 section.showcase article:nth-of-type(2) figure:after {
 	left: 50%;
 	transform: translateX(-50%);
-	top: 86%;
+	top: 88%;
 	border-right: 50px solid transparent;
 	border-left: 50px solid transparent;
 	border-bottom: 50px solid @color_brown;
 	border-top: 0 solid transparent;
-
 }
 
 section.showcase article:nth-of-type(4) figure:after {
@@ -314,7 +318,7 @@ section.showcase article:nth-of-type(-n+3) p {
 
 section.showcase article:nth-of-type(2) p {
 	position: absolute;
-	bottom: 0;
+	bottom: 1em;
 	left: 0;
 }
 
@@ -335,12 +339,11 @@ section.showcase article:last-child {
 	display: block;
 	width: 100%;
 	position: relative;
-	padding-top: 1.5em;
 }
 
 section.showcase article:last-child h3 {
 	position: absolute;
-	top: 1em;
+	top: 0;
 	right: 0;
 }
 
