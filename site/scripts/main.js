@@ -46,6 +46,15 @@ Site.is_mobile = function() {
 };
 
 /**
+ * Handle successful form submission.
+ * @param object response_data
+ */
+Site.handle_submission = function(response_data) {
+	dataLayer.push({event: 'leadsent'});
+	return true;
+};
+
+/**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
@@ -61,6 +70,12 @@ Site.testimonials = new PageControl('div.wrapper', 'article');
 	.attachNextControl($('a.next'))
 	.attachPreviousControl($('a.prev'))
 	.setWrapAround(true);
+
+// Form submissions Handler
+for (var index in Caracal.ContactForm.list) {
+		var contact_form = Caracal.ContactForm.list[index];
+		contact_form.events.connect('submit-success', Site.handle_submission);
+	}
 };
 
 
